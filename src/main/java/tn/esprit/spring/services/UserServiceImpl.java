@@ -15,9 +15,9 @@ public class UserServiceImpl implements IUserService {
 
 	@Autowired
 	UserRepository userRepository;
-
+	
 	private static final Logger l = LogManager.getLogger(UserServiceImpl.class);
- 	
+ 	final String cnxdb = "connexion à la DB Ok :";
 	@Override
 	public List<User> retrieveAllUsers() { 
 		List<User> users = null; 
@@ -25,7 +25,7 @@ public class UserServiceImpl implements IUserService {
 			
 			l.info("In Method retrieveAllUsers :");
 			users = (List<User>) userRepository.findAll(); 
-			l.debug("connexion à la DB Ok :"); 
+			l.debug(cnxdb); 
 			for (User user : users) {
 				l.debug("user :" + user.getLastName()); 
 			} 
@@ -46,7 +46,7 @@ public class UserServiceImpl implements IUserService {
 		try {
 			l.info("In Method addUser :");
 			u_saved = userRepository.save(u); 
-			l.debug("connexion à la DB Ok :"); 
+			l.debug(cnxdb); 
 			
 		} catch (Exception e) {
 			l.error("error in addUser() : " + e);
@@ -63,7 +63,7 @@ public class UserServiceImpl implements IUserService {
 		try {
 			l.info("In Method updateUser :"); 
 			userUpdated = userRepository.save(u); 
-			l.debug("connexion à la DB Ok :");  
+			l.debug(cnxdb);  
 			
 		} catch (Exception e) {
 			l.error("error in updateUser() : " + e);
@@ -78,7 +78,7 @@ public class UserServiceImpl implements IUserService {
 		try {
 			l.info("In Method deleteUser :"); 
 			userRepository.deleteById(Long.parseLong(id)); 
-			l.debug("connexion à la DB Ok :"); 
+			l.debug(cnxdb); 
 			
 		} catch (Exception e) {
 			l.error("error in deleteUser() : " + e);
@@ -92,7 +92,7 @@ public class UserServiceImpl implements IUserService {
 		try {
 			l.info("In Method retrieveUser :"); 
 			u =  userRepository.findById(Long.parseLong(id)).get(); 
-			l.debug("connexion à la DB Ok :"); 
+			l.debug(cnxdb); 
 			
 		} catch (Exception e) {
 			l.error("error in retrieveUser() : " + e);
