@@ -25,7 +25,7 @@ public class UserServiceImpl implements IUserService {
 			
 			l.info("In Method retrieveAllUsers :");
 			users = (List<User>) userRepository.findAll(); 
-			l.debug(cnxdb); 
+			l.debug("connexion a la database OK : ..."); 
 			for (User user : users) {
 				l.debug("user :" + user.getLastName()); 
 			} 
