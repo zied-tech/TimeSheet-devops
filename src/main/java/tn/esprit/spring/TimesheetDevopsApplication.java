@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import tn.esprit.spring.services.UserServiceImpl;
+import tn.esprit.spring.services.EmployeServiceImpl;
 
 
 
@@ -15,7 +15,7 @@ public class TimesheetDevopsApplication {
 		SpringApplication.run(TimesheetDevopsApplication.class, args);
 	}
 	
-	UserServiceImpl us=null;
+	EmployeServiceImpl us=null;
 	String string = "2015-03-20";
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 	LocalDate date = LocalDate.parse(string, formatter);
@@ -23,9 +23,6 @@ public class TimesheetDevopsApplication {
 	//commentair one
 	//commentaire ttwo
 	
-
-	//User u = new User("Ali","Ben ahmed",date,Role.ADMINISTRATEUR);
-	//User userAdded = us.addUser(u);
 
 	
 	

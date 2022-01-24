@@ -18,7 +18,7 @@
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 	<dependencies>
-	
+
 	<dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-logging</artifactId>
@@ -69,6 +69,7 @@
 		</plugins>
 	</build>
 	 <!--
+		 comment
 	<repositories>
 	<repository>
 	<id>acme-nexus-releases</id>
