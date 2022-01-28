@@ -31,7 +31,7 @@ IEmployeService es;
 @Test
 public void testRetrieveAllEmployes(){
 	List<Employe> employes = es.retrieveAllEmployes();
-	Assertions.assertEquals(4,employes.size());
+	Assertions.assertEquals(0,employes.size());
 }
 
 @Order(2)
